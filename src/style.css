@@ -1,0 +1,61 @@
+:root{
+  --noite:#0c2142; --azul:#1d4f91; --aco:#a9c1de; --caixa:#d5e2f1; --papel:#f7f9fc;
+  --sans:'Manrope','Helvetica Neue',Arial,sans-serif; --serif:'Cormorant Garamond',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html,body{max-width:100%;overflow-x:hidden}
+body{background:#161b24;font-family:var(--sans);padding:12px;padding-top:calc(12px + env(safe-area-inset-top,0px));padding-bottom:calc(30px + env(safe-area-inset-bottom,0px))}
+.barra{text-align:center;color:#cfd6e2;font-size:14px;line-height:1.5;margin-bottom:34px}
+.barra p{margin-top:12px}
+#ajustes{display:none;margin-top:12px;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap;color:#cfd6e2;font-size:15px}
+#ajustes:not([hidden]){display:flex}
+.btn,.baixar{display:inline-block;padding:12px 22px;border:0;border-radius:99px;background:var(--aco);color:var(--noite);font:700 15px var(--sans)}
+#foto{display:none}
+.item{margin:0 auto 36px;position:relative}
+.moldura{overflow:hidden;margin:0 auto}
+
+/* ===== CARD 1080x1920 — conteúdo dentro da área segura de stories/status ===== */
+.card{width:1080px;height:1920px;transform-origin:top left;display:flex;flex-direction:column;overflow:hidden;color:var(--noite);
+  padding:190px 90px 250px;
+  background:
+   radial-gradient(circle at 0 20%,rgba(169,193,222,.45) 0,rgba(169,193,222,0) 26%),
+   radial-gradient(circle at 100% 60%,rgba(169,193,222,.4) 0,rgba(169,193,222,0) 30%),
+   radial-gradient(circle at 15% 100%,rgba(169,193,222,.35) 0,rgba(169,193,222,0) 28%),
+   var(--papel)}
+
+.head{display:flex;justify-content:space-between;align-items:flex-end}
+h1{font:500 176px/.8 var(--sans);letter-spacing:-8px;margin-left:-6px}
+h1 span{display:block;font:700 54px/1 var(--sans);letter-spacing:5px;margin:28px 0 0 4px}
+.foto{width:320px;height:290px;background-repeat:no-repeat;border-radius:26px;background:linear-gradient(150deg,#1d4f91,var(--noite));background-size:cover;background-position:center;
+  display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;font:700 40px/1.15 var(--sans);padding:24px}
+.foto.tem span{display:none}
+.sub{font:700 40px/1.2 var(--sans);margin:46px 0 26px}
+
+.meio{flex:1;min-height:0;display:flex;flex-direction:column}
+.grade{flex:1;display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(4,1fr);gap:16px}
+.num{background:var(--aco);border-radius:14px;display:flex;align-items:center;justify-content:center;font:800 62px var(--sans);color:var(--noite)}
+.num.vendido{background:#e1e9f3;color:#93a8c6}
+.num.vendido span{text-decoration:line-through;text-decoration-thickness:5px}
+.obrigado{grid-column:1/-1;grid-row:3/5;border:3px solid var(--aco);border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px}
+.obrigado b{font:800 48px/1.15 var(--sans)}
+.obrigado span{font:500 32px/1.4 var(--sans);margin-top:14px;max-width:640px}
+
+.premios{flex:1;background:var(--caixa);border-radius:26px;padding:30px 44px;display:flex;flex-direction:column;justify-content:space-between}
+.premios div{font:500 41px/1.1 var(--sans);padding-left:46px;position:relative}
+.premios div::before{content:"";position:absolute;left:0;top:50%;width:16px;height:16px;margin-top:-8px;border-radius:50%;background:var(--azul)}
+
+.caixa{margin-top:26px;background:var(--caixa);border-radius:24px;padding:26px 34px;font:500 31px/1.35 var(--sans)}
+.caixa b{font-weight:800}
+.faixas{display:grid;grid-template-columns:1fr 1fr;gap:6px 30px;margin-top:10px}
+.faixas span{font:500 31px/1.4 var(--sans)}
+.faixas b{font-weight:800}
+.chips{display:flex;gap:14px;margin-top:14px}
+.meio + .chips{margin-top:26px}
+.chip{background:#fff;border:2px solid var(--aco);border-radius:20px;padding:16px 22px}
+.chip small{display:block;font:700 23px var(--sans);color:var(--azul);margin-bottom:4px}
+.chip b{display:block;font:800 34px/1.15 var(--sans)}
+.chip b.p{font:700 27px/1.25 var(--sans)}
+
+.verso{margin-top:26px;background:var(--noite);color:#eaf0f9;text-align:center;padding:28px 40px 30px;border-radius:24px;font:italic 600 36px/1.3 var(--serif)}
+.verso cite{display:block;margin-top:6px;font:700 24px var(--sans);font-style:normal;color:var(--aco)}
